@@ -2,13 +2,13 @@
 
 level=1
 xp=0
+offset=50
 earn_xp () {
     gain=$((15+$RANDOM%36))
     ((xp+=$gain))
 }
 
 gain_level() {
-    offset=50
     earn_xp
     if [[ $xp -ge $offset ]];then
         ((level+=1))
